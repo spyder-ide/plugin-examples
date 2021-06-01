@@ -1,0 +1,13 @@
+# ----------------------------------------------------------------------------
+# Copyright © 2021, Spyder Bot
+#
+# Licensed under the terms of the MIT license
+# ----------------------------------------------------------------------------
+
+# See: https://pre-commit.com/
+repos:
+-   repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+    - id: black
+      verbose: true
