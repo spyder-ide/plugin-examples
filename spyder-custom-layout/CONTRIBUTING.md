@@ -113,10 +113,9 @@ pytest tests/spyder/test_plugin.py
 
 A reminder for the maintainers on how to deploy.
 Make sure all your changes are committed (including an entry in HISTORY.rst).
-Then run:
+Then edit `spyder_custom_layout/__init__.py` and update the plugin version and run:
 
 ```bash
-bump2version patch  # possible: major / minor / patch
 git push
 git push --tags
 ```

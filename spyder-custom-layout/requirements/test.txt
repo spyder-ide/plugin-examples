@@ -1,7 +1,6 @@
 check-manifest
 codecov
-pre-commit
 pytest
 pytest-cov
-Pytest-qt
+pytest-qt
 recommonmark

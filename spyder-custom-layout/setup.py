@@ -22,6 +22,7 @@ setup(
     description="Example plugin that register a programmatic custom layout",
     license="MIT license",
     url="https://github.com/spyder-bot/spyder-custom-layout",
+    python_requires='>= 3.7',
     install_requires=[
         "qtpy",
         "qtawesome",
@@ -38,9 +39,9 @@ setup(
         "Operating System :: Microsoft :: Windows",
         "Operating System :: POSIX :: Linux",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Education",
         "Intended Audience :: Science/Research",
