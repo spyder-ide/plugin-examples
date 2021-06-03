@@ -2,7 +2,6 @@
 
 ### Issue Report Checklist
 
-* [ ] Searched the [issues page](https://github.com/spyder-ide/spyder/issues?q=is%3Aissue) for similar reports
 * [ ] Read the relevant sections of the [Spyder Troubleshooting Guide](https://github.com/spyder-ide/spyder/wiki/Troubleshooting-Guide-and-FAQ) and followed its advice
 * [ ] Reproduced the issue after updating with ``conda update spyder`` (or ``pip``, if not using Anaconda)
 * [ ] Could not reproduce inside ``jupyter qtconsole`` (if console-related)
