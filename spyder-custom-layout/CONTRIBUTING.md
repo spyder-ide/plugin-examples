@@ -60,7 +60,7 @@ git clone git@github.com:your_name_here/spyder-custom-layout.git
 ```bash
 conda create -n spyder-custom-layout python
 cd spyder-custom-layout/
-python setup.py develop
+pip install -e .
 ```
 
 1. Create a branch for local development:
