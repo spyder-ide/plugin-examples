@@ -2,20 +2,31 @@
 
 Example plugin that register a programmatic custom layout
 
-## Build status
-
-https://github.com/spyder-ide/spyder-boilerplate/actions?query=workflow%3A%22Win+tests%22
-
-[![Win](https://github.com/spyder-ide/spyder-custom-layout/workflows/Win%20tests/badge.svg)](https://github.com/spyder-ide/spyder-custom-layout/actions?query=workflow%3A%22Win+tests%22)
-[![Mac](https://github.com/spyder-ide/spyder-custom-layout/workflows/Mac%20tests/badge.svg)](https://github.com/spyder-ide/spyder-custom-layout/actions?query=workflow%3A%22Mac+tests%22)
-[![Linux](https://github.com/spyder-ide/spyder-custom-layout/workflows/Linux%20tests/badge.svg)](https://github.com/spyder-ide/spyder-custom-layout/actions?query=workflow%3A%Linux+tests%22)
-[![Codecov](https://codecov.io/gh/spyder-ide/spyder-custom-layout/branch/master/graph/badge.svg)](https://codecov.io/gh/spyder-ide/spyder-custom-layout)
-[![Crowdin](https://badges.crowdin.net/spyder-custom-layout/localized.svg)](https://crowdin.com/project/spyder-custom-layout)
-[![Docs](https://readthedocs.org/projects/spyder-custom-layout/badge/?version=latest)](https://spyder-custom-layout.readthedocs.io/en/latest/?badge=latest)
-
 ## Features
 
-* TODO
+* Example custom layout [class definition (`CustomLayout`)](./spyder_custom_layout/spyder/api.py#:~:text={CustomLayout})
+
+* Example [registration through the attribute class `CUSTOM_LAYOUTS`](./spyder_custom_layout/spyder/plugin.py#:~:text={CUSTOM_LAYOUTS}) of a custom layout definition
+
+* Example [`class attribute TABIFY` usage](./spyder_custom_layout/spyder/plugin.py#:~:text={TABIFY}) for plugin pane setup
+
+## Preview
+
+* Custom layout entry in the layouts menu:
+
+![Spyder Custom Layouts in menu](./docs/images/custom_layout_menu.png)
+
+* Custom layout applied:
+
+![Spyder Custom Layouts applied](./docs/images/custom_layout.png)
+
+* Plugin docking space after layout application if `TABIFY` attribute is defined :
+
+![Spyder Custom Layouts with TABIFY](./docs/images/custom_layout_tabify.gif)
+
+* Plugin docking space after layout application without `TABIFY` attribute definition:
+
+![Spyder Custom Layouts without TABIFY](./docs/images/custom_layout_without_tabify.gif)
 
 ## Credits
 

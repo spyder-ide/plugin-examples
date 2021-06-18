@@ -37,7 +37,7 @@ class SpyderCustomLayout(SpyderDockablePlugin):
     CUSTOM_LAYOUTS = [CustomLayout]
     # To force the plugin to be tabbed to a specific plugin even if a layout
     # defines a default area
-    # TABIFY = [Plugins.Editor]
+    TABIFY = [Plugins.Editor]
 
     # --- Signals
 
