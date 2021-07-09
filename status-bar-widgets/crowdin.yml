@@ -1,0 +1,15 @@
+# ----------------------------------------------------------------------------
+# Copyright © 2021, Spyder Bot
+#
+# Licensed under the terms of the MIT license
+# ----------------------------------------------------------------------------
+
+commit_message: '[ci skip] New %language% translation from Crowdin'
+append_commit_message: false
+files:
+  - source: /status_bar_widgets/spyder/locale/status_bar_widgets.pot
+    translation: /status_bar_widgets/status_bar_widgets/locale/%two_letters_code%/LC_MESSAGES/%file_name%.po
+    languages_mapping:
+      two_letters_code:
+        pt-BR: pt_BR
+        zh-CN: zh_CN

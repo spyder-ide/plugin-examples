@@ -1,0 +1,6 @@
+name: spyder-plugin-examples
+channels:
+  - conda-forge
+dependencies:
+  - spyder=5
+  - python=3
