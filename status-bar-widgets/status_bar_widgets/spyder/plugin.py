@@ -9,6 +9,7 @@ Status bar widgets Plugin.
 """
 
 # Third-party imports
+from qtpy.QtCore import Slot
 from qtpy.QtGui import QIcon
 
 # Spyder imports
@@ -49,11 +50,22 @@ class StatusbarWidgets(SpyderPluginV2):
         container = self.get_container()
         statusbar = self.get_plugin(Plugins.StatusBar)
 
-        # Add theme status widget to status bar
+        # Connect signals
+        container = self.get_container()
+        container.sig_font_size_change_requested.connect(
+            self.on_font_size_change_requested)
+
+        # Add status widgets to status bar
         statusbar.add_status_widget(container.theme_status_widget)
+        statusbar.add_status_widget(container.plain_font_size_status)
 
     def on_close(self, cancellable=True):
         return True
 
     # --- Public API
     # ------------------------------------------------------------------------
+    @Slot(int)
+    def on_font_size_change_requested(self, value):
+        """This won't be necessary since Spyder 5.1.0!"""
+        for __, plugin in self.main._PLUGINS.items():
+            plugin.update_font()
