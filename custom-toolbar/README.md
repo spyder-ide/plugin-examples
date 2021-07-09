@@ -2,20 +2,19 @@
 
 Example that shows how to add a custom toolbar to Spyder
 
-## Build status
-
-https://github.com/spyder-ide/spyder-boilerplate/actions?query=workflow%3A%22Win+tests%22
-
-[![Win](https://github.com/spyder-ide/custom-toolbar/workflows/Win%20tests/badge.svg)](https://github.com/spyder-ide/custom-toolbar/actions?query=workflow%3A%22Win+tests%22)
-[![Mac](https://github.com/spyder-ide/custom-toolbar/workflows/Mac%20tests/badge.svg)](https://github.com/spyder-ide/custom-toolbar/actions?query=workflow%3A%22Mac+tests%22)
-[![Linux](https://github.com/spyder-ide/custom-toolbar/workflows/Linux%20tests/badge.svg)](https://github.com/spyder-ide/custom-toolbar/actions?query=workflow%3A%Linux+tests%22)
-[![Codecov](https://codecov.io/gh/spyder-ide/custom-toolbar/branch/master/graph/badge.svg)](https://codecov.io/gh/spyder-ide/custom-toolbar)
-[![Crowdin](https://badges.crowdin.net/custom-toolbar/localized.svg)](https://crowdin.com/project/custom-toolbar)
-[![Docs](https://readthedocs.org/projects/custom-toolbar/badge/?version=latest)](https://custom-toolbar.readthedocs.io/en/latest/?badge=latest)
-
 ## Features
 
-* TODO
+* Custom toolbar with a couple of actions that show an informative message and a warning using QMessageBox'es.
+
+## Preview
+
+* Custom toolbar
+
+![Custom toolbar](./docs/images/custom-toolbar.png)
+
+* Toolbar in action
+
+![Toolbar in action](./docs/images/toolbar-in-action.gif)
 
 ## Credits
 
