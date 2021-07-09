@@ -35,3 +35,4 @@ spyder
 
 * [Custom layout](./spyder-custom-layout): It shows how to add a custom window layout to the interface and place dockable plugins next to others using the `TABIFY` attribute.
 * [Status bar widgets](./status-bar-widgets): It shows how to add different kinds of widgets to the status bar.
+* [Custom toolbar](./custom-toolbar): It shows how to add a custom toolbar to Spyder
