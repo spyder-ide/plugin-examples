@@ -52,6 +52,3 @@ class CustomToolbar(SpyderPluginV2):
 
     def on_close(self, cancellable=True):
         return True
-
-    # --- Public API
-    # ------------------------------------------------------------------------
