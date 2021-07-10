@@ -18,20 +18,10 @@ from spyder.api.widgets.main_container import PluginMainContainer
 
 # Local imports
 from custom_toolbar.spyder.widgets import CustomToolbar
+from custom_toolbar.spyder.api import (
+    CustomToolbarActions, CustomToolbarSections)
 
 _ = get_translation("custom_toolbar.spyder")
-
-
-# ---- Constants
-# ----------------------------------------------------------------------------
-class CustomToolbarActions:
-    ShowInfo = 'show_info'
-    ShowWarning = 'show_message'
-
-
-class CustomToolbarSections:
-    First = "first_section"
-    Second = "second_section"
 
 
 # ---- Container
