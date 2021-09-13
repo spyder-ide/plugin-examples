@@ -13,6 +13,7 @@ from qtpy.QtCore import Slot
 from qtpy.QtGui import QIcon
 
 # Spyder imports
+from spyder.api.plugin_registration.decorators import on_plugin_available
 from spyder.api.plugins import Plugins, SpyderPluginV2
 from spyder.api.translations import get_translation
 
@@ -46,14 +47,18 @@ class StatusbarWidgets(SpyderPluginV2):
     def get_icon(self):
         return QIcon()
 
-    def register(self):
+    def on_initialize(self):
         container = self.get_container()
-        statusbar = self.get_plugin(Plugins.StatusBar)
 
         # Connect signals
         container = self.get_container()
         container.sig_font_size_change_requested.connect(
             self.on_font_size_change_requested)
+
+    @on_plugin_available(plugin=Plugins.StatusBar)
+    def on_statusbar_available(self):
+        container = self.get_container()
+        statusbar = self.get_plugin(Plugins.StatusBar)
 
         # Add status widgets to status bar
         statusbar.add_status_widget(container.theme_status_widget)
@@ -66,6 +71,13 @@ class StatusbarWidgets(SpyderPluginV2):
     # ------------------------------------------------------------------------
     @Slot(int)
     def on_font_size_change_requested(self, value):
-        """This won't be necessary since Spyder 5.1.0!"""
-        for __, plugin in self.main._PLUGINS.items():
+        """This won't be necessary since Spyder 5.2.0!"""
+        # This is required due to a bug in 5.1
+        plugins = {
+            self.main.get_plugin(Plugins.Editor),
+            self.main.get_plugin(Plugins.IPythonConsole)
+        }
+        plugins |= set(self.main._PLUGINS.values())
+
+        for plugin in plugins:
             plugin.update_font()
