@@ -13,6 +13,7 @@ Custom toolbar plugin.
 from qtpy.QtGui import QIcon
 
 # Spyder imports
+from spyder.api.plugin_registration.decorators import on_plugin_available
 from spyder.api.plugins import Plugins, SpyderPluginV2
 from spyder.api.translations import get_translation
 
@@ -45,7 +46,11 @@ class CustomToolbar(SpyderPluginV2):
     def get_icon(self):
         return QIcon()
 
-    def register(self):
+    def on_initialize(self):
+        pass
+
+    @on_plugin_available(plugin=Plugins.Toolbar)
+    def on_toolbar_available(self):
         container = self.get_container()
         toolbar = self.get_plugin(Plugins.Toolbar)
         toolbar.add_application_toolbar(container.toolbar)
